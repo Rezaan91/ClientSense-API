@@ -1,6 +1,8 @@
 fastapi
 uvicorn
-scikit-learn
-pandas
-numpy
+sqlalchemy
+psycopg2-binary
+passlib[bcrypt]
+python-jose
+python-multipart
 pydantic
