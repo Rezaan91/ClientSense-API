@@ -9,6 +9,8 @@ A powerful churn prediction and customer-insights engine designed for businesses
 - Engagement monitoring
 - Automated early-warning alerts
 - Recommendations for targeted retention actions
+- User authentication and authorization
+- Database integration with SQLAlchemy
 
 ## Installation
 
@@ -23,8 +25,16 @@ A powerful churn prediction and customer-insights engine designed for businesses
 
 Then visit http://127.0.0.1:8000/docs for interactive API docs.
 
+## Authentication
+
+- Register a new user: POST `/register` with username and password
+- Login: POST `/token` with form data to get JWT token
+- Use the token in Authorization header for protected endpoints
+
 ## Endpoints
 
 - GET / : Welcome message
 - GET /health : Health check
-- POST /predict_churn : Predict churn (placeholder)
+- POST /register : Register a new user
+- POST /token : Login and get access token
+- POST /predict_churn : Predict churn (requires authentication)
